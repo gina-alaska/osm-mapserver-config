@@ -12,7 +12,7 @@ WEB
       "wms_srs" "EPSG:900913 EPSG:4326 EPSG:3857 EPSG:3338 EPSG:3572 EPSG:3857 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576"
       "labelcache_map_edge_buffer" "-10"
       "wms_title" "osm"
-      'ows_onlineresource' 'http://osm.proto.gina.alaska.edu/overlay-new?'
+      'ows_onlineresource' 'http://osm.gina.alaska.edu/osm/overlay?'
    END
 END
 DEBUG 10
