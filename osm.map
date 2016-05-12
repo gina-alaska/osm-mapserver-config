@@ -11,8 +11,7 @@ WEB
       "wms_srs" "EPSG:900913 EPSG:900913 EPSG:4326 EPSG:3857 EPSG:3338 EPSG:3572 EPSG:3857 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576"
       "labelcache_map_edge_buffer" "-10"
       "wms_title" "osm"
-      'ows_onlineresource'  'http://ogc.gina.alaska.edu/osm?'
-
+      'ows_onlineresource'  'http://ogc.gina.alaska.edu/osm/osm?'
    END
 END
 PROJECTION
@@ -43,6 +42,20 @@ LAYER
   METADATA
     "wms_srs"             "EPSG:900913 EPSG:4326 EPSG:3857 EPSG:3338 EPSG:3572 EPSG:3857 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576"
     "wms_name"            "MS"
+    "wms_server_version"  "1.1.1"
+    "wms_format"          "image/png"
+  END
+END
+
+LAYER
+  NAME "overlay-no-labels"
+  TYPE RASTER
+  STATUS ON
+  CONNECTION "http://osm.gina.alaska.edu/osm/no_labels?"
+  CONNECTIONTYPE WMS
+  METADATA
+    "wms_srs"             "EPSG:900913 EPSG:4326 EPSG:3857 EPSG:3338 EPSG:3572 EPSG:3857 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576"
+    "wms_name"            "places18,borders18,aeroways18,roads18,railways18,transport_areas18,land18,places17,borders17,aeroways17,roads17,railways17,transport_areas17,land17,places16,borders16,aeroways16,roads16,railways16,transport_areas16,land16,places15,borders15,aeroways15,roads15,railways15,transport_areas15,land15,places14,borders14,aeroways14,roads14,railways14,transport_areas14,land14,places13,borders13,aeroways13,roads13,railways13,transport_areas13,land13,places12,borders12,aeroways12,roads12,railways12,transport_areas12,land12,places11,borders11,aeroways11,roads11,railways11,transport_areas11,land11,places10,borders10,aeroways10,roads10,railways10,land10,places9,borders9,roads9,railways9,land9,places8,borders8,roads8,railways8,land8,places7,borders7,roads7,land7,places6,borders6,roads6,land6,places5,borders5,roads5,land5,places4,borders4,land4,places3,borders3,land3,places2,borders2,land2,places1,borders1,land1,places0,borders0,land0" 
     "wms_server_version"  "1.1.1"
     "wms_format"          "image/png"
   END
