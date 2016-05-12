@@ -5,9 +5,7 @@ defaults:
   maps:
     unused: no_such_map
 configs:
-  "/osm/basemap":
-    prefix: "osm"
-    url: "/osm/basemap"
+  "/basemap":
     projections:
       default: "osm-basemap.map"
       3338: "osm-basemap.alaska.map"
@@ -19,9 +17,7 @@ configs:
       3574: "osm-basemap.alaska_polar.map"
       3575: "osm-basemap.alaska_polar.map"
       3576: "osm-basemap.alaska_polar.map"
-  "/osm/overlay":
-    prefix: "osm"
-    url: "/osm/overlay"
+  "/overlay":
     projections:
       default: "osm-ol.map"
       3338: "osm-ol.alaska.map"
@@ -33,8 +29,18 @@ configs:
       3574: "osm-ol.alaska_polar.map"
       3575: "osm-ol.alaska_polar.map"
       3576: "osm-ol.alaska_polar.map"
-  "/osm/osm":
-    prefix: "osm"
-    url: "/osm/osm"
+  "/no_labels":
+    projections:
+      default: "osm-ol-nl.map"
+      3338: "osm-ol-nl.alaska.map"
+      4326: "osm-ol-nl.map"
+      3857: "osm-ol-nl.google.map"
+      900913: "osm-ol-nl.google.map"
+      3572: "osm-ol-nl.alaska_polar.map"
+      3573: "osm-ol-nl.alaska_polar.map"
+      3574: "osm-ol-nl.alaska_polar.map"
+      3575: "osm-ol-nl.alaska_polar.map"
+      3576: "osm-ol-nl.alaska_polar.map"
+  "/osm":
     projections:
       default: "osm.map"
