@@ -1,0 +1,40 @@
+defaults:
+  envsh: /opt/mapping_tools_builds/2016.05.11/setup.sh
+  mapserv: /opt/mapping_tools_builds/2016.05.11/bin/mapserv
+  timeout: 3600
+  maps:
+    unused: no_such_map
+configs:
+  "/osm/basemap":
+    prefix: "osm"
+    url: "/osm/basemap"
+    projections:
+      default: "osm-basemap.map"
+      3338: "osm-basemap.alaska.map"
+      4326: "osm-basemap.map"
+      3857: "osm-basemap.google.map"
+      900913: "osm-basemap.google.map"
+      3572: "osm-basemap.alaska_polar.map"
+      3573: "osm-basemap.alaska_polar.map"
+      3574: "osm-basemap.alaska_polar.map"
+      3575: "osm-basemap.alaska_polar.map"
+      3576: "osm-basemap.alaska_polar.map"
+  "/osm/overlay":
+    prefix: "osm"
+    url: "/osm/overlay"
+    projections:
+      default: "osm-ol.map"
+      3338: "osm-ol.alaska.map"
+      4326: "osm-ol.map"
+      3857: "osm-ol.google.map"
+      900913: "osm-ol.google.map"
+      3572: "osm-ol.alaska_polar.map"
+      3573: "osm-ol.alaska_polar.map"
+      3574: "osm-ol.alaska_polar.map"
+      3575: "osm-ol.alaska_polar.map"
+      3576: "osm-ol.alaska_polar.map"
+  "/osm/osm":
+    prefix: "osm"
+    url: "/osm/osm"
+    projections:
+      default: "osm.map"

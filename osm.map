@@ -1,0 +1,51 @@
+MAP
+IMAGETYPE png
+MAXSIZE 4000
+SIZE 800 800
+EXTENT -180 0 180 90
+UNITS meters
+IMAGECOLOR "#B3C6D4"
+WEB
+   METADATA
+      "ows_enable_request" "*"
+      "wms_srs" "EPSG:900913 EPSG:900913 EPSG:4326 EPSG:3857 EPSG:3338 EPSG:3572 EPSG:3857 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576"
+      "labelcache_map_edge_buffer" "-10"
+      "wms_title" "osm"
+      'ows_onlineresource'  'http://ogc.gina.alaska.edu/osm?'
+
+   END
+END
+PROJECTION
+   "init=epsg:4326"
+END
+
+
+LAYER
+  NAME "overlay"
+  TYPE RASTER
+  STATUS ON
+  CONNECTION "http://ogc.gina.alaska.edu/osm/overlay"
+  CONNECTIONTYPE WMS
+  METADATA
+    "wms_srs"             "EPSG:900913 EPSG:4326 EPSG:3857 EPSG:3338 EPSG:3572 EPSG:3857 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576"
+    "wms_name"            "MS"
+    "wms_server_version"  "1.1.1"
+    "wms_format"          "image/png"
+  END
+END
+
+LAYER
+  NAME "basemap"
+  TYPE RASTER
+  STATUS ON
+  CONNECTION "http://ogc.gina.alaska.edu/osm/basemap?"
+  CONNECTIONTYPE WMS
+  METADATA
+    "wms_srs"             "EPSG:900913 EPSG:4326 EPSG:3857 EPSG:3338 EPSG:3572 EPSG:3857 EPSG:3573 EPSG:3574 EPSG:3575 EPSG:3576"
+    "wms_name"            "MS"
+    "wms_server_version"  "1.1.1"
+    "wms_format"          "image/png"
+  END
+END
+
+END
